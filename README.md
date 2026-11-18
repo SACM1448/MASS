@@ -172,6 +172,32 @@ Clasificar cada hallazgo como **confirmado** (verificado), **reportado** (declar
 
 **Confirmado en la copia HTML aportada al levantamiento.** El formulario pide nombre completo, correo electrónico, celular, selección de servicio y subservicio, número de identificación o código Uniandes del estudiante o interesado (se puede indicar uno o ambos), descripción de la solicitud y respuestas a las preguntas sobre tratamiento de datos. Permite adjuntar archivos. La copia consultada muestra el formulario como canal de radicación y no publica un horario de atención. La consulta del HTML no verifica el envío ni el procesamiento de solicitudes en el portal activo.
 
+## 7. Mapa general del portal Servicios Uniandes
+
+**Consulta del 18 de noviembre de 2026.** El [portal Servicios Uniandes](https://servicios.uniandes.edu.co/) reúne accesos para estudiantes, profesores, administrativos y terceros, según el servicio. El recorrido siguió las categorías y sus fichas públicas hasta identificar la oferta general y las vías de acceso. Los enlaces a transacciones, áreas autenticadas y manuales específicos delimitan el alcance de este mapa.
+
+| Área y fuente | Oferta general y rutas de acceso |
+|---|---|
+| [Vida Académica](https://servicios.uniandes.edu.co/vida-academica/) | Reglamentos, admisiones y Registro, calendario, matrículas, cartera, apoyo financiero y académico (Orión), consejería, convivencia y Decanatura. También remite a intercambios, innovación y emprendimiento, prácticas y oportunidades profesionales, Centro de Español, Bibliotecas y voluntariado. |
+| [Vida en el Campus](https://servicios.uniandes.edu.co/vidacampus/) | Acceso y carnetización, deporte, casilleros, alimentación, tienda, salud, movilidad, objetos encontrados, servicios al aula, mantenimiento, vivienda, parqueaderos y Gerencia de Negocios Institucionales. El acceso al campus contempla comunidad Uniandes, visitantes, contratistas y proveedores. |
+| Tecnología | El portal distingue servicios para toda la comunidad (cuenta y A2P, conectividad, herramientas académicas y colaborativas, software, soporte, cómputo de investigación y seguridad) y oferta para profesores y administrativos (aplicaciones de gestión, CRM, telefonía, analítica y nube). Ver [Acceso y Conexión](https://tecnologia.uniandes.edu.co/conexion/), [Comunicaciones y Canales](https://tecnologia.uniandes.edu.co/comunicaciones/) e [Investigación y Creación](https://tecnologia.uniandes.edu.co/investigacion/). |
+| [Eventos](https://servicios.uniandes.edu.co/eventos/) | Asesoría y producción para eventos presenciales y virtuales, agenda cultural, alimentación, aseo especial, seguridad y reserva de espacios. La ficha de reservas distingue salones, auditorios, áreas comunes, salas de exposición y escenarios como Centro Deportivo, CityU, Hacienda El Noviciado y Sede Caribe. |
+| [Gestión Administrativa y Financiera](https://servicios.uniandes.edu.co/gestion-administrativa-y-financiera/) | Consultar el [catálogo de 14 servicios](#6-catálogo-público-de-gestión-administrativa-y-financiera), que incluye el formulario de Recaudos de Servicios de Ingresos. |
+| [Gestión Humana y Desarrollo Organizacional](https://ghdo.uniandes.edu.co/) | Atracción y promoción, contratación laboral y civil, nómina y certificados, gestión de extranjeros, seguridad social, formación, desarrollo, cultura, bienestar y asuntos laborales. |
+
+### Rutas de acceso verificadas en las fichas públicas
+
+| Necesidad | Ruta publicada |
+|---|---|
+| Calendario, cursos, certificados y carnetización | [Registro](https://www.uniandes.edu.co/es/registro) publica calendarios, acceso a miBanner, oferta de cursos y rutas para certificados, carnetización y citas virtuales. El acceso a calendario del catálogo redirigió a esta página. |
+| Matrículas y pagos estudiantiles | [Matrículas](https://matriculas.uniandes.edu.co/) dirige al Portal de Servicios a Estudiantes para pagos, confirmación de ingreso, reserva de cupo, consulta del historial y certificados de pago. Para financiación y becas, el catálogo remite a [Apoyo Financiero](https://apoyofinanciero.uniandes.edu.co/). |
+| Salones, equipos y espacios | [Servicios al Aula](https://servicios.uniandes.edu.co/servicios-al-aula/) cubre salones, apoyo audiovisual, préstamo de equipos y salas de computadores. [Reserva de espacios](https://servicios.uniandes.edu.co/reserva-de-espacios-para-eventos-y-exposiciones/) enlaza Bookeau para salones, auditorios, áreas comunes y salas de exposición, y publica contactos para otras sedes. |
+| Cuenta, soporte e incidentes de tecnología | [Mi Cuenta Uniandes](https://tecnologia.uniandes.edu.co/micuenta/) reúne orientación de cuenta y A2P. [Comunicaciones y Canales](https://tecnologia.uniandes.edu.co/comunicaciones/) publica SénecaBot por WhatsApp, MisSolicitudes para registrar solicitudes e incidentes, correo, teléfono y atención presencial DSIT. El enlace de MisSolicitudes abrió la pantalla de acceso. |
+
+**Relación con MASS.** Se observan un catálogo que orienta al usuario y canales especializados para registrar o gestionar solicitudes. La publicación de estas rutas permite identificar destinos de atención. Queda por validar qué servicios cubre SénecaBot y cómo se conserva la trazabilidad al pasar de un canal a otro.
+
+**Cobertura parcial.** El portal de asesoría en eventos devolvió una página sin contenido legible en la consulta y algunos destinos de Vida Académica y Gestión Humana no cargaron. Cuando fue posible se usó la descripción del catálogo. El destino enlazado para el protocolo MAAD mostró contenido ajeno al servicio y queda pendiente verificar el enlace institucional.
+
 ---
 
 > **Alcance documental:** notas de levantamiento complementadas con el PDI institucional y el catálogo público de servicios. Las iniciativas estratégicas, observaciones operativas y hechos técnicos se diferencian expresamente para no presentar supuestos como implementaciones confirmadas.
