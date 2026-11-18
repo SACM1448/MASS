@@ -33,6 +33,8 @@ El propósito es evolucionar hacia un modelo de atención más eficiente, integr
 
 ## 2. Metodología para abordar las necesidades
 
+El levantamiento de MASS se concentra en observar e interpretar los servicios de IA existentes. Su alcance es comprender y documentar su funcionamiento técnico, funcional y operativo.
+
 Se plantea una metodología de tres etapas:
 
 ### 2.1. Observar
@@ -245,6 +247,8 @@ El modelo busca trasladar progresivamente la capacidad de resolución hacia los 
 
 ## 5. Plataformas, sistemas y herramientas
 
+El inventario identifica herramientas mencionadas en el levantamiento. Las integraciones, los ambientes y las dependencias se validan por separado para cada servicio.
+
 Se identificaron las siguientes herramientas dentro del ecosistema de atención.
 
 | Plataforma | Función |
@@ -273,6 +277,8 @@ Actualmente se identifica como una plataforma para:
 ### 5.2. SénecaBot
 
 Se identificó la siguiente relación entre componentes:
+
+**Reportado.** El siguiente esquema conserva el orden en que se mencionaron los componentes. La dirección efectiva del intercambio y la función de cada enlace están pendientes de validación.
 
 ```text
     ┌──────────────┐
@@ -363,3 +369,53 @@ Los siguientes puntos requieren mayor información para comprender completamente
 ---
 
 > **Nota:** Este documento organiza los apuntes recopilados sobre el Modelo de Atención Transversal de la VAF. Algunas descripciones fueron ampliadas para facilitar su comprensión. Las relaciones técnicas, integraciones y responsabilidades específicas deberán validarse con los equipos correspondientes.
+
+---
+
+## 9. Entrevistas sobre agentes en producción
+
+La entrevista está dirigida a quien administra o da soporte a los agentes en producción. Se parte del contexto reportado de que la persona entrevistada no participa directamente en su desarrollo. Al inicio, identificar qué conoce de primera mano sobre arquitectura, integraciones y operación. Usar la agenda A si conoce la construcción técnica, la B si su experiencia es principalmente operativa, o combinar los bloques pertinentes. La reunión se centra en comprender los servicios y sus dependencias.
+
+### 9.1. Agenda A — Conocimiento técnico integral
+
+Duración sugerida de 90 minutos.
+
+| Tiempo | Tema | Preguntas guía |
+|---|---|---|
+| 10 min | Inventario y canales | ¿Qué agentes están en producción, qué funciones tienen y por qué canales atienden? |
+| 15 min | Arquitectura e infraestructura | ¿Qué componentes intervienen, dónde se alojan y existe un orquestador central? |
+| 15 min | Construcción y despliegue | ¿Qué tecnologías, plataformas y repositorios utilizan? ¿Quién los administra? ¿Cómo versionan y despliegan las soluciones? |
+| 15 min | Datos y conocimiento | ¿Qué fuentes consultan y cómo se actualizan? ¿Se usan RAG, embeddings o bases de datos vectoriales? |
+| 15 min | Proveedores e integraciones | ¿Qué proveedores, modelos y APIs usan? ¿Cómo interactúan con sistemas institucionales y de qué servicios externos dependen? |
+| 15 min | Operación y seguridad | ¿Cómo administran, monitorean y diagnostican los servicios? ¿Cómo gestionan los accesos y los incidentes? |
+| 5 min | Documentación y cierre | ¿Qué documentación técnica existe y quién puede aclarar lo que quede pendiente? |
+
+Solicitar diagramas de arquitectura y una demostración cuando estén disponibles.
+
+### 9.2. Agenda B — Conocimiento operativo y soporte
+
+Duración sugerida de 75 minutos.
+
+| Tiempo | Tema | Preguntas guía |
+|---|---|---|
+| 10 min | Inventario operativo | ¿Qué agentes y servicios administra o soporta? ¿Qué función cumple cada uno? |
+| 15 min | Plataformas y proveedores | ¿Qué plataformas y proveedores participan? ¿Qué función operativa asume cada uno? |
+| 15 min | Comunicación e integraciones | ¿Qué relación tienen SénecaBot, CariAI y otros agentes? ¿Cómo se comunican entre sí y con los sistemas institucionales? ¿Qué ocurre cuando falla una integración? |
+| 15 min | Administración y monitoreo | ¿Qué consolas utiliza? ¿Dónde consulta registros, alertas e indicadores? |
+| 10 min | Diagnóstico y escalamiento | ¿Qué incidentes se repiten? ¿Cómo localiza el origen del fallo? ¿Qué resuelve directamente y qué casos escala? |
+| 5 min | Seguridad y continuidad | ¿Cómo se administran permisos y accesos? ¿Qué mecanismos de continuidad existen? |
+| 5 min | Documentación y cierre | ¿Qué guías operativas existen y quién puede responder las preguntas pendientes? |
+
+Solicitar una demostración de las consolas y el recorrido de un incidente real, con los datos sensibles omitidos.
+
+### 9.3. Registro y validación de hallazgos
+
+| Estado | Criterio |
+|---|---|
+| Confirmado | El hallazgo se verificó con documentación, una demostración o un equipo que puede corroborarlo. |
+| Reportado | El hallazgo se mencionó durante el levantamiento y está por corroborar. |
+| Hipótesis | Es una interpretación técnica que requiere verificación. |
+| Pendiente | Falta información o queda una pregunta abierta. |
+| Descartado | Una fuente de validación refutó expresamente el hallazgo. |
+
+Para cada hallazgo, registrar la fecha, el servicio o componente, la fuente, el estado y la evidencia o pregunta de validación. Si se corrige un dato, actualizar su descripción y conservar la trazabilidad del cambio.
