@@ -120,41 +120,7 @@ flowchart TD
 | Unidades solicitantes y ordenador de la unidad | El funcionario que necesita una adquisición inicia el registro del proveedor. El ordenador aprueba la creación o modificación de roles de SIRE. |
 | Contratación de Ingresos y Dirección Jurídica | Intervienen en la ruta de facturación asociada a contratos o convenios de ingreso. El aval jurídico se circunscribe a ese proceso. |
 
-## 7. Análisis de criticidad institucional
-
-La categoría expresa una valoración documental de MASS. **A (crítica)** requiere evidencia de interrupción directa de un proceso esencial o de varios servicios esenciales. **B (alta)** requiere afectación significativa de un proceso relevante o una dependencia importante acreditada. **C (media)** corresponde a afectación operativa acotada. **D (baja)** exige evidencia de impacto limitado y de continuidad de los procesos esenciales. **N/D** indica que la evidencia disponible permite describir la función, pero resulta insuficiente para asignar un nivel. La columna de usuarios identifica destinatarios documentados. Para N/D, el alcance de afectación por indisponibilidad queda sin determinar.
-
-| Servicio | Proceso relacionado | Dependencias | Usuarios afectados | Criticidad | Justificación |
-|---|---|---|---|---|---|
-| Trámites académicos digitales en miBanner y servicios asociados | Admisión, certificación académica y solicitud de apoyos financieros | miBanner y servicios asociados, según el aviso institucional | Aspirantes y estudiantes que realizan esos trámites | A | Durante la actualización, la Universidad anunció la reanudación de las tres gestiones al restablecer el servicio. El efecto documentado abarca la tramitación digital de ingreso y dos gestiones estudiantiles. [Aviso institucional](https://mantenimiento.uniandes.edu.co/mtobanner2026/index.html) |
-| Resolución de conflictos de horario | Inscripción de materias | SCH | Estudiantes que solicitan cupos o ajustes y departamentos que los resuelven | B | La instrucción publicada identifica al SCH como único medio admitido para tramitar esos conflictos. Solo se consideran las solicitudes recibidas por ese sistema. [Planeación de horarios](https://sistemas.uniandes.edu.co/es/isis-activos/planeacion-horario) |
-| Abastecimiento Estratégico | Aprovisionamiento | Catálogos y proveedores | Unidades académicas y administrativas | N/D | La ficha describe negociación y provisión. |
-| Activos Fijos | Inventarios | Formatos de registro y novedades | Unidades y responsables de bienes | N/D | La directriz identifica movimientos y responsables. |
-| Gestión Documental y Memoria Institucional | Archivo y conservación | Tablas de retención documental | Unidades académicas y administrativas, investigadores | N/D | El portal describe instrumentos de gestión y consulta. |
-| Asesoría Contable e Informes de Ejecución Financiera | Operación financiera y tributaria | Mesa de atención | Unidades, estudiantes y proveedores según el trámite | N/D | La ficha identifica consultas, certificaciones y estados de cuenta. |
-| Compra de Bienes y Servicios | Adquisición y recepción | Autoservicio de Compras de Oracle para los trámites señalados | Unidades solicitantes | N/D | Se documentan rutas de compra y recepción según la categoría. |
-| Contratación | Formalización de servicios | Rutas diferenciadas por tipo de contratista | Unidades, personas naturales y jurídicas | N/D | Se documenta cómo iniciar el trámite. |
-| Correspondencia y Mensajería Certificada | Distribución documental | Recorridos y operadores de mensajería | Unidades académicas y administrativas | N/D | Se publican cobertura, horarios y acuerdos de servicio. |
-| Facturación | Emisión y corrección de facturas | Formulario comercial, remisión a DIAN y destinatario | Unidades, terceros y estudiantes | N/D | La ficha describe emisión, envío y notas crédito. |
-| Gestión Presupuestal | Planeación y ajustes | Oracle EPM para registro, MisSolicitudes para soporte | Facultades y unidades administrativas | N/D | La ficha describe el bloqueo de acceso a EPM y su atención, sin medir el efecto sobre el ciclo presupuestal. |
-| Viajes | Desplazamientos institucionales | Cotización, compra y legalización | Viajeros institucionales, estudiantes e invitados según modalidad | N/D | Se identifican canales y etapas de gestión. |
-| Sistema de Pagos y Recaudos | Pago y consulta de recaudos | SIRE | Estudiantes, aspirantes, profesores y empleados según rol | N/D | Están documentadas las funciones de pago y consulta. |
-| Servicios de Ingresos | Recaudos y cartera | Formulario de Recaudos | Estudiantes y administrativos | N/D | El formulario enumera trámites, incluidos errores de pasarela. No determina su alcance operativo. |
-| Zona Proveedores | Registro comercial | Funcionario solicitante y autorregistro | Proveedores, contratistas y unidades compradoras | N/D | La ficha establece quién inicia el registro. |
-| Seguridad y Salud en el Trabajo | Prevención y reporte | SG-SST y canales publicados | Comunidad uniandina y empleados según actividad | N/D | La ficha describe prevención y reporte, sin valorar la interrupción del servicio. |
-| Matrículas y pagos estudiantiles | Matrícula financiera | Portal de Servicios a Estudiantes | Estudiantes y patrocinadores según trámite | N/D | La página identifica pagos y certificados. El aviso de Mi Banner se refiere a otros trámites. |
-| Servicios al Aula y reserva de espacios | Docencia y eventos | Bookeau para las reservas especificadas | Estudiantes, profesores, unidades y organizadores | N/D | Se documentan reservas y préstamos. La disponibilidad de la plataforma y la de los espacios son alcances distintos. |
-| Soporte tecnológico y orientación de CuentaIA | Atención e identidad | SénecaBot, MisSolicitudes y canal web según la necesidad | Usuarios de servicios digitales | N/D | La guía verifica la orientación al usuario. El impacto de una interrupción del agente carece de medición. |
-| Cómputo para investigación | Investigación y creación | Clúster HPC, nube local y Azure como ofertas | Comunidad investigadora | N/D | Se documenta la oferta de recursos, sin identificar proyectos dependientes específicos. |
-| Servicios laborales | Gestión humana | Portal GHDO | Personal universitario y contratistas según trámite | N/D | Se identifican contratación, nómina, certificados y seguridad social. |
-| Apoyo académico y servicios de campus | Acompañamiento y vida universitaria | Orión y rutas particulares del catálogo | Estudiantes y comunidad según servicio | N/D | El directorio identifica prestaciones y públicos. La evidencia disponible es descriptiva. |
-| Acceso a la cuenta institucional y A2P | Identidad digital | Cuenta Uniandes y verificación de identidad | Titulares de cuentas institucionales | N/D | Se documentan dificultades individuales de acceso y recuperación. No se caracteriza la interrupción del servicio de identidad a escala institucional. |
-| Asesoría y logística de eventos | Organización de eventos | Asesoría, reservas y servicios de apoyo según el evento | Organizadores y unidades | N/D | El directorio describe la oferta y las rutas de contacto. |
-| Conectividad y colaboración | Acceso a red y colaboración digital | Redes inalámbricas y herramientas de comunicación según el servicio | Comunidad universitaria y visitantes según red | N/D | Las fichas explican acceso y soporte, sin documentar el efecto institucional de una interrupción. |
-
-Una misma herramienta puede ser compartida sin compartir la misma criticidad. Bookeau figura en citas y reservas, mientras que MisSolicitudes da entrada tanto al soporte general como al de EPM. El aviso sobre miBanner delimita las operaciones afectadas y permite valorar su alcance conjunto.
-
-## 8. Matriz de relaciones y trazabilidad
+## 7. Matriz de relaciones y trazabilidad
 
 La tabla sigue la acción del usuario desde su punto de entrada. El guion indica que la fuente describe el trámite sin identificar el elemento de esa columna.
 
@@ -173,10 +139,4 @@ La tabla sigue la acción del usuario desde su punto de entrada. El guion indica
 | Contratación | Formalización contractual | Selector por tipo de persona | Portal institucional y ruta GHDO | El usuario pasa a la ruta de persona natural o jurídica | GHDO para la ruta de persona natural publicada | Contratistas y unidades |
 | Viajes | Legalización de gastos | Aplicación o correo según modalidad | App de legalización | El viajero presenta gastos y soportes | Equipo de Viajes | Viajeros institucionales |
 
-## 9. Hallazgos y vacíos documentales
-
-- **Integraciones de los agentes.** Sigue sin acreditarse qué operación ejecuta cada flujo de Power Automate, cuáles atraviesan MuleSoft, qué sistemas reciben las lecturas o escrituras y qué permisos aplican. Tampoco se verificaron el uso concreto de Microsoft Graph, el recorrido de red hacia Azure, el papel de CariAI ni la transferencia de contexto entre CuentaIA y SénecaBot.
-- **Atención transversal.** Faltan responsables por canal, reglas de escalamiento, identificador de caso entre canales, tiempos de atención y evidencia sobre cierres. La gestión de turnos con Inconcert y su conexión con SénecaBot se registraron como proyecciones. La participación de Salesforce en cada trámite queda abierta.
-- **Fuentes y operación.** Falta identificar responsables de actualización de las bases de conocimiento, indicadores de disponibilidad y monitoreo. En N1 se reportaron barreras de acceso o uso de Power BI. La copia HTML de Recaudos acredita los campos y subservicios. No permite verificar envío, sistema que procesa el caso, horario ni interoperabilidad con SIRE, Flywire o Eventtia.
-- **Contraste de fuentes.** El horario de cierre entre semana del contacto tecnológico difiere entre la guía de CuentaIA y la ficha de canales de DSIT. La consulta inicial del enlace MAAD desde Vida en el Campus devolvió contenido ajeno al servicio. La página institucional de Convivencia y Transparencia sí documenta el protocolo. Algunas páginas de destino de Eventos, Vida Académica y Gestión Humana solo pudieron caracterizarse mediante sus directorios.
-- **Continuidad y responsabilidades.** Las filas N/D identifican servicios para los que faltan efectos documentados de interrupción, alcance o contingencias. Los servicios agrupados conservan esa condición para cada prestación incluida. La documentación distingue el área que atiende el trámite de la que administra la plataforma cuando ambas se conocen. En las demás rutas queda sin identificar el responsable técnico.
+Las filas N/D identifican servicios para los que faltan efectos documentados de interrupción, alcance o contingencias. Los servicios agrupados conservan esa condición para cada prestación incluida. La documentación distingue el área que atiende el trámite de la que administra la plataforma cuando ambas se conocen. En las demás rutas queda sin identificar el responsable técnico.
