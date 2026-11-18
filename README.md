@@ -277,34 +277,13 @@ Actualmente se identifica como una plataforma para:
 
 ### 5.2. SénecaBot
 
-Se identificó la siguiente relación entre componentes:
+**Reportado.** SénecaBot (mencionado también como SénecaIA en el levantamiento) y CuentaIA se derivan usuarios en ambos sentidos. Cuando un usuario consulta a SénecaBot por problemas con su cuenta institucional, se le dirige al canal web de CuentaIA. Desde CuentaIA también se puede derivar al usuario a SénecaBot.
 
-**Reportado.** El siguiente esquema conserva el orden en que se mencionaron los componentes. La dirección efectiva del intercambio y la función de cada enlace están pendientes de validación.
-
-```text
-    ┌──────────────┐
-    │    CariAI    │
-    └──────┬───────┘
-           │
-           ▼
-    ┌──────────────┐
-    │  SénecaBot   │
-    └──────┬───────┘
-           │
-           ▼
-    ┌──────────────┐
-    │    Cuenta    │
-    └──────────────┘
-```
-
-**Pendiente de validación:**
-
-- Función específica de CariAI.
-- Función del componente Cuenta.
-- Tipo de integración entre los componentes.
-- Flujo de información entre las plataformas.
+**Pendiente de validación.** Precisar cuándo y por qué canal se realiza la derivación desde CuentaIA, cómo se implementa cada redirección y si se transfiere contexto de la consulta. CariAI fue mencionado en relación con SénecaBot. Su función y el tipo de vínculo siguen pendientes de validar.
 
 ### 5.3. CuentaIA
+
+En este levantamiento, «Cuenta» y «CuentaIA» designan al mismo agente. La derivación con SénecaBot se describe en la sección 5.2.
 
 **Confirmado en la fuente documental.** El «Flujo 2 – Restablecer y Cambio de Contraseña», versión 5.4 del 4 de marzo de 2025, está identificado como material de base de conocimiento para Copilot Studio y usa el portal Cuenta Uniandes como fuente canónica. Distingue el cambio de contraseña cuando el usuario puede iniciar sesión del restablecimiento cuando perdió el acceso. También cubre el primer ingreso sin contraseña inicial y los casos de contraseña vencida o vulnerable. Para el cambio y el restablecimiento, la guía deriva al usuario desde Cuenta Uniandes a los portales correspondientes de Microsoft. Establece que el agente no solicita ni almacena contraseñas ni códigos y contempla la derivación a canales oficiales. SénecaBot aparece como canal oficial de atención en la guía.
 
@@ -318,7 +297,7 @@ Se identificó la siguiente relación entre componentes:
 | Azure | Alojamiento del canal web, único canal reportado para CuentaIA. |
 | Cloudflare y DNS institucional | Cloudflare participa en la publicación del canal web bajo el dominio institucional. Está pendiente validar la configuración DNS y el recorrido de las solicitudes hacia Azure. |
 
-**Pendiente.** Identificar qué acciones ejecuta Power Automate y cuáles pasan por MuleSoft en cada flujo. El documento describe la orientación al usuario y no acredita que MuleSoft ejecute cambios de contraseña. Validar si el componente «Cuenta» de la sección 5.2 corresponde a CuentaIA, al portal Cuenta Uniandes o a otro componente, y si existe una integración técnica con SénecaBot más allá de la referencia como canal oficial.
+**Pendiente.** Identificar qué acciones ejecuta Power Automate y cuáles pasan por MuleSoft en cada flujo. El documento describe la orientación al usuario y no acredita que MuleSoft ejecute cambios de contraseña.
 
 ---
 
@@ -373,7 +352,7 @@ Los siguientes puntos requieren mayor información para comprender completamente
 - [ ] Identificar todos los canales de atención actuales.
 - [ ] Comprender la arquitectura funcional de SénecaBot.
 - [ ] Identificar la función de CariAI.
-- [ ] Identificar el componente denominado Cuenta.
+- [ ] Validar cómo se implementa la derivación bidireccional entre SénecaBot y CuentaIA.
 - [ ] Comprender cómo se integra Inconcert con las demás plataformas.
 - [ ] Determinar el papel de Salesforce dentro del ciclo de atención.
 - [ ] Identificar los responsables de cada nivel.
