@@ -258,6 +258,7 @@ Se identificaron las siguientes herramientas dentro del ecosistema de atención.
 | **Acquia** | Gestión de sitios web institucionales. |
 | **Inconcert** | Gestión y centralización de correos electrónicos y telefonía. |
 | **SénecaBot** | Atención automatizada de nivel 0. |
+| **CuentaIA** | Agente web que orienta en gestiones de acceso a la cuenta Uniandes. |
 | **Power BI** | Consulta y visualización de información. |
 | **Excel** | Herramienta utilizada como base de conocimiento en algunos procesos. |
 
@@ -302,6 +303,22 @@ Se identificó la siguiente relación entre componentes:
 - Función del componente Cuenta.
 - Tipo de integración entre los componentes.
 - Flujo de información entre las plataformas.
+
+### 5.3. CuentaIA
+
+**Confirmado en la fuente documental.** El «Flujo 2 – Restablecer y Cambio de Contraseña», versión 5.4 del 4 de marzo de 2025, está identificado como material de base de conocimiento para Copilot Studio y usa el portal Cuenta Uniandes como fuente canónica. Distingue el cambio de contraseña cuando el usuario puede iniciar sesión del restablecimiento cuando perdió el acceso. También cubre el primer ingreso sin contraseña inicial y los casos de contraseña vencida o vulnerable. Para el cambio y el restablecimiento, la guía deriva al usuario desde Cuenta Uniandes a los portales correspondientes de Microsoft. Establece que el agente no solicita ni almacena contraseñas ni códigos y contempla la derivación a canales oficiales. SénecaBot aparece como canal oficial de atención en la guía.
+
+**Arquitectura reportada en el levantamiento del 18 de noviembre de 2026.**
+
+| Componente | Función reportada |
+|---|---|
+| Copilot Studio | Plataforma en la que está construido CuentaIA. |
+| Power Automate | Flujos de automatización utilizados por el agente. |
+| MuleSoft | Capa de integración utilizada como bus de datos para consultar y modificar información. El alcance de esas operaciones por flujo está pendiente de validar. |
+| Azure | Alojamiento del canal web, único canal reportado para CuentaIA. |
+| Cloudflare y DNS institucional | Cloudflare participa en la publicación del canal web bajo el dominio institucional. Está pendiente validar la configuración DNS y el recorrido de las solicitudes hacia Azure. |
+
+**Pendiente.** Identificar qué acciones ejecuta Power Automate y cuáles pasan por MuleSoft en cada flujo. El documento describe la orientación al usuario y no acredita que MuleSoft ejecute cambios de contraseña. Validar si el componente «Cuenta» de la sección 5.2 corresponde a CuentaIA, al portal Cuenta Uniandes o a otro componente, y si existe una integración técnica con SénecaBot más allá de la referencia como canal oficial.
 
 ---
 
