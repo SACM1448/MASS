@@ -75,18 +75,7 @@ Las fichas del [catálogo institucional](https://servicios.uniandes.edu.co/gesti
 
 ## 4. Arquitectura e integraciones
 
-La guía de CuentaIA *Flujo 2 – Restablecer y Cambio de Contraseña* (versión 5.4) distingue dos recorridos del usuario. El primero exige poder iniciar sesión. El segundo conduce a la verificación de identidad para recuperar el acceso. La guía incluye primer ingreso sin contraseña inicial, vencimiento y cambio por vulnerabilidad, y establece que el agente no solicita ni almacena contraseñas o códigos.
-
-```mermaid
-flowchart TD
-    U["Usuario en el portal Cuenta Uniandes"] --> S{"¿Puede iniciar sesión?"}
-    S -->|Sí| C["Cambiar contraseña"]
-    S -->|No| R["Restablecer mi acceso"]
-    C --> M["Microsoft: cambio con autenticación"]
-    R --> V["Microsoft: verificación y recuperación"]
-```
-
-**Implementación reportada de CuentaIA.** El agente se construyó en Copilot Studio y utiliza flujos de Power Automate. La guía se identifica como material de conocimiento de Copilot Studio. MuleSoft cumple la función reportada de bus para consultar y modificar información. El canal web se aloja en Azure y su publicación involucra Cloudflare y el DNS institucional. Estos datos describen componentes. El diagrama representa únicamente las acciones del usuario respaldadas por la guía.
+**Implementación reportada de CuentaIA.** El agente se construyó en Copilot Studio y utiliza flujos de Power Automate. MuleSoft cumple la función reportada de bus para consultar y modificar información. El canal web se aloja en Azure y su publicación involucra Cloudflare y el DNS institucional.
 
 **Facturación y recaudos.** La unidad solicita una factura comercial mediante formulario. Facturación gestiona la emisión y el envío a la DIAN y al cliente o estudiante. La matrícula patrocinada tiene una ruta propia. Para convenios y contratos de ingreso intervienen Contratación de Ingresos y la Dirección Jurídica. SIRE da acceso a pagos y reportes de recaudo. El formulario de Recaudos recibe solicitudes sobre registros fuera de SIRE, enlaces Flywire y eventos Eventtia. En este último caso, la relación documentada es el trámite que se solicita.
 
@@ -94,17 +83,7 @@ flowchart TD
 
 El modelo VAF describe tres niveles. **N0** ofrece autoservicio con SénecaBot. **N1** atiende solicitudes iniciales, entre ellas apoyo financiero y matrículas. **N2** resuelve casos especializados. El objetivo es transferir conocimiento de N2 a N1 y de N1 a N0.
 
-La DSIT publica chat por WhatsApp, teléfono, correo, atención presencial y MisSolicitudes. Según el proyecto, SénecaBot deriva a la web de CuentaIA cuando el usuario presenta problemas con su cuenta. También se reporta derivación de CuentaIA hacia SénecaBot. La referencia en la guía a WhatsApp corresponde a SénecaBot. [Canales de tecnología](https://tecnologia.uniandes.edu.co/comunicaciones/).
-
-```mermaid
-flowchart TD
-    N["Necesidad de una unidad"] --> P{"¿Qué necesita?"}
-    P -->|Registrar presupuesto| E["Oracle EPM"]
-    P -->|Resolver una falla de EPM| T["MisSolicitudes"]
-    T --> O["Servicios Administrativos / Oracle Cloud / Oracle Presupuesto"]
-    O --> D["Soporte DSIT"]
-    P -->|Modelar una iniciativa| G["Equipo de modelaje financiero"]
-```
+La DSIT publica chat por WhatsApp, teléfono, correo, atención presencial y MisSolicitudes. El proyecto reporta derivaciones entre SénecaBot y CuentaIA para consultas de acceso. [Canales de tecnología](https://tecnologia.uniandes.edu.co/comunicaciones/).
 
 **Radicación en Servicios de Ingresos.** El formulario pide nombre, correo, celular, servicio y subservicio, identificación o código Uniandes (admite ambos), descripción y respuestas sobre tratamiento de datos. Permite adjuntar archivos. Quien necesita pagar un producto puede acceder a SIRE. Quien necesita certificar o corregir un pago encuentra el trámite en Recaudos.
 
@@ -124,19 +103,19 @@ flowchart TD
 
 La tabla sigue la acción del usuario desde su punto de entrada. El guion indica que la fuente describe el trámite sin identificar el elemento de esa columna.
 
-| Servicio | Proceso | Canal de entrada | Herramienta | Relación funcional o intercambio | Área o actor con función documentada | Usuarios |
-|---|---|---|---|---|---|---|
-| Registro | Inscripción de cursos | Web de Registro | miBanner | El usuario accede al sistema para elaborar su horario | Registro | Estudiantes |
-| Conflictos de horario | Solicitud de cupo o ajuste | Formulario SCH | SCH | El departamento recibe y resuelve casos de su competencia | Admisiones y Registro y departamentos | Estudiantes |
-| Gestión Presupuestal | Soporte de plataforma | MisSolicitudes | Oracle EPM | El usuario reporta una incidencia de Oracle Presupuesto | DSIT (soporte) | Unidades |
-| Reservas | Docencia y eventos | Ficha del espacio | Bookeau | El usuario pasa a la solicitud de reserva | Servicios al Aula para salones y recursos de clase | Comunidad según espacio |
-| Servicios de Ingresos | Validación o corrección de pago | Formulario web | Formulario de Recaudos | El solicitante elige subservicio y puede adjuntar soportes | Recaudos | Estudiantes y administrativos |
-| Facturación comercial | Emisión de factura | Formulario comercial | — | Remisión a DIAN y destinatario | Facturación | Unidades, clientes y estudiantes |
-| Recaudos en línea | Pago y seguimiento | Portal de pagos o de consulta | SIRE | Pago por el usuario y consulta de recaudos por la unidad | Unidad y Facturación según rol | Aspirantes, estudiantes y personal habilitado |
-| Acceso a la cuenta | Cambio o recuperación | Web de CuentaIA y portal Cuenta Uniandes | Portales Microsoft | Redirección del usuario según su acceso | — | Titulares de cuentas Uniandes |
-| Compra y registro de proveedores | Alta comercial | Funcionario que solicita la compra | Portal de proveedores | El funcionario indica la ruta de registro al proveedor | Unidad solicitante | Proveedores y contratistas |
-| Activos Fijos | Cambio de custodio o ubicación | Correo con copia a la jefatura | Formato de novedades | La unidad comunica el movimiento de inventario | Activos Fijos y unidad solicitante | Custodios de bienes |
-| Contratación | Formalización contractual | Selector por tipo de persona | Portal institucional y ruta GHDO | El usuario pasa a la ruta de persona natural o jurídica | GHDO para la ruta de persona natural publicada | Contratistas y unidades |
-| Viajes | Legalización de gastos | Aplicación o correo según modalidad | App de legalización | El viajero presenta gastos y soportes | Equipo de Viajes | Viajeros institucionales |
+| Servicio | Proceso | Canal de entrada | Herramienta | Relación funcional o intercambio | Área o actor con función documentada | Usuarios | Fuente de consulta |
+|---|---|---|---|---|---|---|---|
+| Registro | Inscripción de cursos | Web de Registro | miBanner | El usuario accede al sistema para elaborar su horario | Registro | Estudiantes | [Registro](https://www.uniandes.edu.co/es/registro) |
+| Conflictos de horario | Solicitud de cupo o ajuste | Formulario SCH | SCH | El departamento recibe y resuelve casos de su competencia | Admisiones y Registro y departamentos | Estudiantes | [Planeación de horarios](https://sistemas.uniandes.edu.co/es/isis-activos/planeacion-horario) |
+| Gestión Presupuestal | Soporte de plataforma | MisSolicitudes | Oracle EPM | El usuario reporta una incidencia de Oracle Presupuesto | DSIT (soporte) | Unidades | [Gestión Presupuestal](https://servicios.uniandes.edu.co/gestion-presupuestal/) |
+| Reservas | Docencia y eventos | Ficha del espacio | Bookeau | El usuario pasa a la solicitud de reserva | Servicios al Aula para salones y recursos de clase | Comunidad según espacio | [Reserva de espacios](https://servicios.uniandes.edu.co/reserva-de-espacios-para-eventos-y-exposiciones/) |
+| Servicios de Ingresos | Validación o corrección de pago | Formulario web | Formulario de Recaudos | El solicitante elige subservicio y puede adjuntar soportes | Recaudos | Estudiantes y administrativos | [Formulario de Recaudos](https://uniandes.my.site.com/s/servicios-cartera-ingresos) |
+| Facturación comercial | Emisión de factura | Formulario comercial | — | Remisión a DIAN y destinatario | Facturación | Unidades, clientes y estudiantes | [Facturación electrónica](https://servicios.uniandes.edu.co/servicio-facturacion/) |
+| Recaudos en línea | Pago y seguimiento | Portal de pagos o de consulta | SIRE | Pago por el usuario y consulta de recaudos por la unidad | Unidad y Facturación según rol | Aspirantes, estudiantes y personal habilitado | [Ficha de SIRE](https://servicios.uniandes.edu.co/sire/) |
+| Cuenta Uniandes | Acceso institucional | Portal web | Portales Microsoft | Orientación y acceso a gestiones de cuenta | — | Titulares de cuentas Uniandes | [Mi Cuenta Uniandes](https://tecnologia.uniandes.edu.co/micuenta/) |
+| Compra y registro de proveedores | Alta comercial | Funcionario que solicita la compra | Portal de proveedores | El funcionario indica la ruta de registro al proveedor | Unidad solicitante | Proveedores y contratistas | [Zona Proveedores](https://servicios.uniandes.edu.co/zona-proveedores/) |
+| Activos Fijos | Cambio de custodio o ubicación | Correo con copia a la jefatura | Formato de novedades | La unidad comunica el movimiento de inventario | Activos Fijos y unidad solicitante | Custodios de bienes | [Activos Fijos](https://servicios.uniandes.edu.co/activos-fijos/) |
+| Contratación | Formalización contractual | Selector por tipo de persona | Portal institucional y ruta GHDO | El usuario pasa a la ruta de persona natural o jurídica | GHDO para la ruta de persona natural publicada | Contratistas y unidades | [Contratación](https://servicios.uniandes.edu.co/contratacion/) |
+| Viajes | Legalización de gastos | Aplicación o correo según modalidad | App de legalización | El viajero presenta gastos y soportes | Equipo de Viajes | Viajeros institucionales | [Servicio de Viajes](https://servicios.uniandes.edu.co/servicio-de-viajes/) |
 
 Las filas N/D identifican servicios para los que faltan efectos documentados de interrupción, alcance o contingencias. Los servicios agrupados conservan esa condición para cada prestación incluida. La documentación distingue el área que atiende el trámite de la que administra la plataforma cuando ambas se conocen. En las demás rutas queda sin identificar el responsable técnico.
