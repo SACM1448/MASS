@@ -1,417 +1,152 @@
+# MASS — Modelo de atención transversal y ecosistema de IA
 
-# Modelo de Atención Transversal de la VAF
+> **Institución:** Universidad de los Andes · **Estado:** levantamiento de información · **Actualizado:** 18 de noviembre de 2026  
+> **Alcance:** comprender y documentar el modelo de atención de la VAF, los agentes de IA en producción, sus plataformas, integraciones y operación. MASS no presupone la construcción de una nueva solución ni la asignación de responsabilidades de soporte.
 
-> **Tema:** Transformación del modelo de atención y servicios administrativos y financieros.  
-> **Institución:** Universidad de los Andes.  
-> **Objetivo general:** Mejorar la experiencia de profesores, administrativos y estudiantes mediante la integración, estandarización y automatización de los servicios.
+## 1. Propósito y alineación institucional
 
----
+El modelo de atención transversal de la **Vicerrectoría Administrativa y Financiera (VAF)** busca mejorar la experiencia de estudiantes, profesores y administrativos mediante procesos articulados, atención consistente y menor dependencia de actividades manuales.
 
-## 1. Contexto y propósito
+El **Programa de Desarrollo Integral (PDI) 2026–2030** de Uniandes es la hoja de ruta institucional. Este levantamiento se relaciona especialmente con:
 
-El **Modelo de Atención Transversal de la VAF** busca mejorar la experiencia de profesores, administrativos y estudiantes en el acceso a los servicios administrativos y financieros de la Universidad de los Andes.
-
-El propósito es evolucionar hacia un modelo de atención más eficiente, integrado y centrado en el usuario, reduciendo los procesos manuales mediante:
-
-- Estandarización de procedimientos.
-- Automatización de actividades repetitivas.
-- Integración entre las diferentes unidades.
-- Centralización de los canales de atención.
-- Mejoramiento de la experiencia del usuario.
-- Gestión y aprovechamiento del conocimiento institucional.
-
-### 1.1. Conceptos institucionales
-
-| Concepto | Descripción |
+| Referente del PDI | Relación con el modelo de atención |
 |---|---|
-| **VAF** | Vicerrectoría Administrativa y Financiera. |
-| **PDI** | Plan de Desarrollo Institucional. |
-| **DISRUPTIA** | Espacio de cocreación entre unidades y la DSIT, orientado a la adaptación al cambio y la construcción conjunta de soluciones. |
-| **Eje estratégico de la VAF** | Experiencia total y de servicio. |
+| **Eficiencia administrativa que impulsa la sostenibilidad y la innovación institucional** (p. 41) | Integración de procesos, información y tecnología; interoperabilidad y automatización. El PDI menciona el **Sistema de Gestión de la Arquitectura Institucional (SGAI)** como habilitador. |
+| **Bienestar y cultura de servicio para transformar la experiencia universitaria** (p. 42) | Atención centrada en las personas, asistentes virtuales, servicios omnicanal y capacidades digitales, analíticas y de servicio. |
+| **Excelencia transformadora: tecnología para evolucionar con propósito** (p. 45) | Automatización inteligente, trazabilidad, integración de plataformas y gobernanza responsable de la IA. |
+| **Interacciones significativas en el ecosistema universitario** (p. 46) | Experiencias ágiles y efectivas, visión integral del usuario y extensión del modelo único de atención a las unidades, con IA. |
+| **Colaboración decidida para la generación de valor con datos** (pp. 47–48) | Interoperabilidad y uso de información confiable para decisiones; colaboración entre unidades. |
+| **Evolución consciente de nuestra cultura de trabajo** (p. 49) | Adaptación, aprendizaje continuo y fortalecimiento de competencias técnicas y digitales. |
 
----
+**Criterio:** estas son orientaciones institucionales del PDI, no evidencia de que cada capacidad ya esté implementada.
 
-## 2. Metodología para abordar las necesidades
+**Fuente:** Universidad de los Andes, *Programa de Desarrollo Integral 2026–2030*, pp. 41–49, documento institucional aportado al levantamiento.
 
-El levantamiento de MASS se concentra en observar e interpretar los servicios de IA existentes. Su alcance es comprender y documentar su funcionamiento técnico, funcional y operativo.
+### Enfoque de trabajo
 
-Se plantea una metodología de tres etapas:
+1. **Observar:** escuchar necesidades y puntos de dolor sin anticipar soluciones.
+2. **Interpretar:** comprender servicios, actores, flujos, dependencias y operación real.
+3. **Intervenir:** etapa posterior de diseño o mejora, solo cuando corresponda.
 
-### 2.1. Observar
+**DISRUPTIA:** espacio reportado de cocreación entre unidades y DSIT para abordar cambios y soluciones conjuntas. Su alcance formal está por precisar.
 
-**Objetivo:** identificar y comprender las necesidades, dificultades y puntos de dolor de los usuarios.
+## 2. Modelo de atención transversal
 
-Consideraciones:
+El objetivo es una atención **end-to-end**: recibir la solicitud, clasificarla, asignar responsables, gestionarla, responder y cerrar con trazabilidad. Se busca evitar que el usuario deba coordinar por sí mismo las transferencias entre unidades.
 
-- Escuchar y comprender las necesidades de los usuarios.
-- Identificar dificultades recurrentes.
-- Obtener una visión general del panorama.
-- Evitar concentrarse prematuramente en casos específicos.
-- No proponer soluciones durante esta etapa.
+### Canales de entrada identificados
 
-**Resultado esperado:** comprensión general de la problemática y las necesidades del servicio.
-
-### 2.2. Interpretar
-
-**Objetivo:** analizar cómo funciona actualmente el servicio.
-
-Consideraciones:
-
-- Identificar los procesos involucrados.
-- Comprender el funcionamiento del servicio.
-- Reconocer los actores y responsables.
-- Identificar dependencias entre unidades.
-- Detectar oportunidades de mejora.
-- Reconocer actividades manuales susceptibles de automatización.
-
-**Resultado esperado:** entendimiento del funcionamiento actual y de los aspectos que requieren intervención.
-
-### 2.3. Intervenir
-
-**Objetivo:** diseñar, construir e implementar soluciones que respondan a las necesidades identificadas.
-
-Consideraciones:
-
-- Diseñar soluciones basadas en las necesidades observadas.
-- Estandarizar procedimientos.
-- Automatizar actividades cuando sea viable.
-- Integrar plataformas y servicios.
-- Mejorar la experiencia de los usuarios.
-
-**Resultado esperado:** implementación de soluciones que optimicen el modelo de atención.
-
-### 2.4. Representación de la metodología
-
-```text
-        ┌─────────────────────┐
-        │     OBSERVAR        │
-        │ Comprender dolores  │
-        │ y necesidades       │
-        └──────────┬──────────┘
-                   │
-                   ▼
-        ┌─────────────────────┐
-        │    INTERPRETAR      │
-        │ Comprender procesos │
-        │ y funcionamiento    │
-        └──────────┬──────────┘
-                   │
-                   ▼
-        ┌─────────────────────┐
-        │     INTERVENIR      │
-        │ Diseñar e           │
-        │ implementar         │
-        │ soluciones          │
-        └─────────────────────┘
-```
-
----
-
-## 3. Modelo de atención End-to-End
-
-El modelo de atención debe garantizar que cada solicitud sea gestionada de manera integral, desde su recepción hasta su resolución y cierre.
-
-### 3.1. Principios del modelo
-
-- **Conectividad:** las diferentes unidades deben estar articuladas.
-- **Responsabilidad:** cada etapa debe contar con responsables definidos.
-- **Estandarización:** los procedimientos deben estar documentados.
-- **Trazabilidad:** debe ser posible conocer el estado de cada solicitud.
-- **Tiempos de atención:** establecer tiempos de respuesta y resolución.
-- **Continuidad:** evitar interrupciones o reprocesos entre unidades.
-
-### 3.2. Flujo general de una solicitud
-
-```text
-   ┌─────────────────────────┐
-   │    Usuario solicita     │
-   │       un servicio       │
-   └────────────┬────────────┘
-                │
-                ▼
-   ┌─────────────────────────┐
-   │   Canal de atención     │
-   │  Entrada centralizada   │
-   └────────────┬────────────┘
-                │
-                ▼
-   ┌─────────────────────────┐
-   │  Clasificación y        │
-   │  asignación             │
-   └────────────┬────────────┘
-                │
-                ▼
-   ┌─────────────────────────┐
-   │  Gestión y resolución   │
-   │  N0 / N1 / N2           │
-   └────────────┬────────────┘
-                │
-                ▼
-   ┌─────────────────────────┐
-   │  Respuesta al usuario   │
-   │  y cierre de solicitud  │
-   └─────────────────────────┘
-```
-
-**Objetivo:** evitar que el usuario deba gestionar manualmente su solicitud entre diferentes áreas.
-
----
-
-## 4. Niveles del modelo de atención
-
-El modelo contempla canales de entrada centralizados y tres niveles de atención.
-
-### 4.1. Canales de atención
-
-**Objetivo:** centralizar y estandarizar la recepción de solicitudes.
-
-Los canales deben permitir que la información llegue de manera estructurada a los procesos correspondientes.
-
-### 4.2. Nivel 0 — N0: SénecaBot
-
-**Función principal:** autoservicio y atención automatizada.
-
-Características:
-
-- Estandarización del lenguaje.
-- Reducción de tecnicismos.
-- Atención de consultas frecuentes.
-- Automatización de solicitudes sencillas.
-- Orientación al usuario.
-- Escalamiento a niveles superiores cuando corresponda.
-
-### 4.3. Nivel 1 — N1: Atención inicial
-
-**Función principal:** atención y resolución de solicitudes que requieren intervención humana de primer nivel.
-
-Contexto identificado:
-
-- Referencia: Leidy (lunes).
-- Apoyo financiero.
-- Procesos relacionados con matrículas.
-- Atención de actividades centrales del negocio.
-- Uso de Excel como base de conocimiento.
-
-**Observación importante:**
-
-Algunos usuarios no tienen acceso a Power BI o desconocen cómo utilizarlo.
-
-Esto representa una barrera para el acceso a la información y debe considerarse en el diseño del servicio.
-
-### 4.4. Nivel 2 — N2: Servicio especializado
-
-**Función principal:** resolver solicitudes de mayor complejidad.
-
-Características:
-
-- Atención de casos especializados.
-- Conocimiento técnico o funcional específico.
-- Resolución de situaciones que no pueden ser atendidas en N0 o N1.
-- Apoyo a la estandarización del conocimiento.
-- Identificación de procedimientos que puedan delegarse a niveles inferiores.
-
-### 4.5. Objetivo: pirámide invertida de atención
-
-El modelo busca trasladar progresivamente la capacidad de resolución hacia los niveles inferiores.
-
-**Delegación esperada:**
-
-- **N2 → N1:** transferir procedimientos especializados que puedan estandarizarse.
-- **N1 → N0:** automatizar solicitudes frecuentes mediante SénecaBot.
-
-```text
-          MODELO DE ATENCIÓN
-
-    ┌───────────────────────────┐
-    │            N0             │
-    │         SénecaBot         │
-    │   Autoservicio masivo     │
-    └───────────────────────────┘
-       ┌─────────────────────┐
-       │         N1          │
-       │  Atención inicial   │
-       └─────────────────────┘
-          ┌───────────────┐
-          │      N2       │
-          │ Especializado │
-          └───────────────┘
-
-       Transferencia de conocimiento:
-
-              N2 → N1 → N0
-```
-
-**Resultado esperado:** aumentar la proporción de solicitudes resueltas en N0 y N1, reservando N2 para casos de mayor complejidad.
-
----
-
-## 5. Plataformas, sistemas y herramientas
-
-El inventario identifica herramientas mencionadas en el levantamiento. Las integraciones, los ambientes y las dependencias se validan por separado para cada servicio.
-
-Se identificaron las siguientes herramientas dentro del ecosistema de atención.
-
-| Plataforma | Función |
+| Canal | Observación |
 |---|---|
-| **Faro Uniandes** | Apoyo financiero. |
-| **Salesforce (CRM)** | Gestión de relaciones e interacciones con los usuarios. |
-| **Acquia** | Gestión de sitios web institucionales. |
-| **Inconcert** | Gestión y centralización de correos electrónicos y telefonía. |
-| **SénecaBot** | Atención automatizada de nivel 0. |
-| **CuentaIA** | Agente web que orienta en gestiones de acceso a la cuenta Uniandes. |
-| **Power BI** | Consulta y visualización de información. |
-| **Excel** | Herramienta utilizada como base de conocimiento en algunos procesos. |
+| Correo electrónico | Canal de atención reportado. |
+| Llamadas telefónicas | Canal de atención reportado. |
+| SénecaIA / SénecaBot | Canal automatizado de atención (N0). |
+| Atención presencial | Canal de contacto directo. |
+| Formularios específicos de servicios | Entradas propias de determinados procesos. |
+| Otros | Categoría reportada, pendiente de desagregar. |
 
-### 5.1. Inconcert
+**Estado:** inventario inicial de canales realizado. Falta precisar responsables por canal, cobertura, registro y trazabilidad de solicitudes, interoperabilidad, y qué otros canales existen. No se asume que todos estén centralizados técnicamente.
 
-Actualmente se identifica como una plataforma para:
+### Niveles de atención
 
-- Gestión de correos electrónicos.
-- Centralización de comunicaciones.
-- Gestión de telefonía.
-
-**Evolución prevista:**
-
-- Gestión de turnos presenciales.
-- Integración futura con SénecaBot.
-
-### 5.2. SénecaBot
-
-**Reportado.** SénecaBot (mencionado también como SénecaIA en el levantamiento) y CuentaIA se derivan usuarios en ambos sentidos. Cuando un usuario consulta a SénecaBot por problemas con su cuenta institucional, se le dirige al canal web de CuentaIA. Desde CuentaIA también se puede derivar al usuario a SénecaBot.
-
-**Pendiente de validación.** Precisar cuándo y por qué canal se realiza la derivación desde CuentaIA, cómo se implementa cada redirección y si se transfiere contexto de la consulta. CariAI fue mencionado en relación con SénecaBot. Su función y el tipo de vínculo siguen pendientes de validar.
-
-### 5.3. CuentaIA
-
-En este levantamiento, «Cuenta» y «CuentaIA» designan al mismo agente. La derivación con SénecaBot se describe en la sección 5.2.
-
-**Confirmado en la fuente documental.** El «Flujo 2 – Restablecer y Cambio de Contraseña», versión 5.4 del 4 de marzo de 2025, está identificado como material de base de conocimiento para Copilot Studio y usa el portal Cuenta Uniandes como fuente canónica. Distingue el cambio de contraseña cuando el usuario puede iniciar sesión del restablecimiento cuando perdió el acceso. También cubre el primer ingreso sin contraseña inicial y los casos de contraseña vencida o vulnerable. Para el cambio y el restablecimiento, la guía deriva al usuario desde Cuenta Uniandes a los portales correspondientes de Microsoft. Establece que el agente no solicita ni almacena contraseñas ni códigos y contempla la derivación a canales oficiales. SénecaBot aparece como canal oficial de atención en la guía.
-
-**Arquitectura reportada en el levantamiento del 18 de noviembre de 2026.**
-
-| Componente | Función reportada |
+| Nivel | Papel previsto |
 |---|---|
-| Copilot Studio | Plataforma en la que está construido CuentaIA. |
-| Power Automate | Flujos de automatización utilizados por el agente. |
-| MuleSoft | Capa de integración utilizada como bus de datos para consultar y modificar información. El alcance de esas operaciones por flujo está pendiente de validar. |
-| Azure | Alojamiento del canal web, único canal reportado para CuentaIA. |
-| Cloudflare y DNS institucional | Cloudflare participa en la publicación del canal web bajo el dominio institucional. Está pendiente validar la configuración DNS y el recorrido de las solicitudes hacia Azure. |
+| **N0 — SénecaBot** | Autoservicio, orientación con lenguaje sencillo y tratamiento de solicitudes frecuentes. |
+| **N1 — Atención inicial** | Apoyo funcional, especialmente en asuntos financieros y matrículas. Se reportó uso de Excel como base de conocimiento y barreras de acceso o manejo de Power BI para algunos usuarios. |
+| **N2 — Especializado** | Resolución de casos que requieren conocimiento o intervención especializada. |
 
-**Pendiente.** Identificar qué acciones ejecuta Power Automate y cuáles pasan por MuleSoft en cada flujo. El documento describe la orientación al usuario y no acredita que MuleSoft ejecute cambios de contraseña.
+**Evolución buscada:** transferir conocimiento/procedimientos estandarizables de **N2 → N1 → N0**, para ampliar la resolución temprana sin sacrificar calidad ni acompañamiento humano. Los criterios concretos de escalamiento y los tiempos de atención aún deben levantarse.
 
----
+## 3. Inventario de herramientas y agentes
 
-## 6. Proyección estratégica 2027
-
-Se identifican dos temas relevantes para el año 2027.
-
-### 6.1. Seguridad psicológica
-
-Promover un entorno de confianza en el que los equipos puedan:
-
-- Expresar inquietudes.
-- Compartir ideas.
-- Proponer mejoras.
-- Participar en procesos de transformación.
-- Adaptarse a los cambios organizacionales.
-
-### 6.2. Afinidad con la analítica de datos
-
-Fortalecer las capacidades de los equipos para utilizar datos como apoyo a la gestión de los servicios.
-
-Aspectos relacionados:
-
-- Comprensión de información.
-- Interpretación de indicadores.
-- Toma de decisiones basada en datos.
-- Identificación de oportunidades de mejora.
-- Desarrollo de capacidades analíticas.
-
----
-
-## 7. Síntesis de la iniciativa
-
-La transformación del modelo de atención transversal de la VAF se fundamenta en cinco elementos principales:
-
-1. **Experiencia del usuario:** mejorar la interacción con los servicios institucionales.
-2. **Integración de procesos:** conectar las diferentes unidades involucradas.
-3. **Automatización:** reducir actividades manuales y repetitivas.
-4. **Gestión del conocimiento:** facilitar el acceso y transferencia de información entre niveles.
-5. **Mejora continua:** evolucionar los servicios a partir de las necesidades identificadas.
-
-### 7.1. Objetivo final
-
-Consolidar un modelo de atención unificado, donde los usuarios puedan realizar solicitudes a través de canales estandarizados, recibir respuestas oportunas y contar con seguimiento de extremo a extremo, independientemente de las unidades que intervengan.
-
----
-
-## 8. Aspectos pendientes de profundización
-
-Los siguientes puntos requieren mayor información para comprender completamente el modelo:
-
-- [ ] Identificar todos los canales de atención actuales.
-- [ ] Comprender la arquitectura funcional de SénecaBot.
-- [ ] Identificar la función de CariAI.
-- [ ] Validar cómo se implementa la derivación bidireccional entre SénecaBot y CuentaIA.
-- [ ] Comprender cómo se integra Inconcert con las demás plataformas.
-- [ ] Determinar el papel de Salesforce dentro del ciclo de atención.
-- [ ] Identificar los responsables de cada nivel.
-- [ ] Documentar los criterios de escalamiento entre N0, N1 y N2.
-- [ ] Identificar las bases de conocimiento existentes.
-- [ ] Definir los tiempos de respuesta y resolución.
-- [ ] Identificar los procesos manuales susceptibles de automatización.
-- [ ] Comprender los indicadores utilizados para medir la experiencia del usuario.
-
----
-
-> **Nota:** Este documento organiza los apuntes recopilados sobre el Modelo de Atención Transversal de la VAF. Algunas descripciones fueron ampliadas para facilitar su comprensión. Las relaciones técnicas, integraciones y responsabilidades específicas deberán validarse con los equipos correspondientes.
-
----
-
-## 9. Entrevistas sobre agentes en producción
-
-La entrevista está dirigida a quien administra o da soporte a los agentes en producción. Se parte del contexto reportado de que la persona entrevistada no participa directamente en su desarrollo. Al inicio, identificar qué conoce de primera mano sobre arquitectura, integraciones y operación. Usar la agenda A si conoce la construcción técnica, la B si su experiencia es principalmente operativa, o combinar los bloques pertinentes. La reunión se centra en comprender los servicios y sus dependencias.
-
-### 9.1. Agenda A — Conocimiento técnico integral
-
-Duración sugerida de 90 minutos.
-
-| Tiempo | Tema | Preguntas guía |
+| Componente | Función o relación conocida | Estado |
 |---|---|---|
-| 10 min | Inventario y canales | ¿Qué agentes están en producción, qué funciones tienen y por qué canales atienden? |
-| 15 min | Arquitectura e infraestructura | ¿Qué componentes intervienen, dónde se alojan y existe un orquestador central? |
-| 15 min | Construcción y despliegue | ¿Qué tecnologías, plataformas y repositorios utilizan? ¿Quién los administra? ¿Cómo versionan y despliegan las soluciones? |
-| 15 min | Datos y conocimiento | ¿Qué fuentes consultan y cómo se actualizan? ¿Se usan RAG, embeddings o bases de datos vectoriales? |
-| 15 min | Proveedores e integraciones | ¿Qué proveedores, modelos y APIs usan? ¿Cómo interactúan con sistemas institucionales y de qué servicios externos dependen? |
-| 15 min | Operación y seguridad | ¿Cómo administran, monitorean y diagnostican los servicios? ¿Cómo gestionan los accesos y los incidentes? |
-| 5 min | Documentación y cierre | ¿Qué documentación técnica existe y quién puede aclarar lo que quede pendiente? |
+| **SénecaBot / SénecaIA** | Atención automatizada N0 y derivación hacia CuentaIA para asuntos de cuenta institucional. | Reportado |
+| **CuentaIA** | Agente web que orienta en gestiones de acceso a la cuenta Uniandes. | Reportado; respaldado parcialmente por guía funcional |
+| **CariAI** | Mencionado en relación con SénecaBot. | Función por validar |
+| **Inconcert** | Centralización de correo y telefonía; se contempla gestión de turnos e integración futura con SénecaBot. | Uso y proyección reportados |
+| **Salesforce** | CRM institucional. | Participación específica en el flujo por validar |
+| **Acquia** | Gestión de sitios web institucionales. | Identificado |
+| **Faro Uniandes** | Apoyo financiero. | Identificado |
+| **Excel / Power BI** | Conocimiento operativo y consulta/visualización de información, respectivamente. | Uso y barreras reportados |
 
-Solicitar diagramas de arquitectura y una demostración cuando estén disponibles.
+**Precaución:** el inventario no implica que todas estas plataformas estén integradas.
 
-### 9.2. Agenda B — Conocimiento operativo y soporte
+### 3.1. SénecaBot y CuentaIA
 
-Duración sugerida de 75 minutos.
+- **Reportado:** hay derivación de usuarios en ambos sentidos entre SénecaBot y CuentaIA. Falta confirmar reglas de derivación, mecanismos técnicos y transferencia de contexto.
+- **Pendiente:** precisar la función de CariAI y su relación técnica con SénecaBot.
 
-| Tiempo | Tema | Preguntas guía |
-|---|---|---|
-| 10 min | Inventario operativo | ¿Qué agentes y servicios administra o soporta? ¿Qué función cumple cada uno? |
-| 15 min | Plataformas y proveedores | ¿Qué plataformas y proveedores participan? ¿Qué función operativa asume cada uno? |
-| 15 min | Comunicación e integraciones | ¿Qué relación tienen SénecaBot, CariAI y otros agentes? ¿Cómo se comunican entre sí y con los sistemas institucionales? ¿Qué ocurre cuando falla una integración? |
-| 15 min | Administración y monitoreo | ¿Qué consolas utiliza? ¿Dónde consulta registros, alertas e indicadores? |
-| 10 min | Diagnóstico y escalamiento | ¿Qué incidentes se repiten? ¿Cómo localiza el origen del fallo? ¿Qué resuelve directamente y qué casos escala? |
-| 5 min | Seguridad y continuidad | ¿Cómo se administran permisos y accesos? ¿Qué mecanismos de continuidad existen? |
-| 5 min | Documentación y cierre | ¿Qué guías operativas existen y quién puede responder las preguntas pendientes? |
+**CuentaIA — evidencia documental:** el documento *Flujo 2 – Restablecer y Cambio de Contraseña*, versión 5.4 (4 de marzo de 2025), está identificado como material de base de conocimiento para Copilot Studio. Orienta sobre cambio y restablecimiento de contraseña, primer acceso y contraseña vencida o vulnerable, con referencia al portal Cuenta Uniandes y canales oficiales. El agente no debe solicitar ni almacenar contraseñas o códigos.
 
-Solicitar una demostración de las consolas y el recorrido de un incidente real, con los datos sensibles omitidos.
+**Arquitectura reportada de CuentaIA (levantamiento del 18/11/2026):**
 
-### 9.3. Registro y validación de hallazgos
-
-| Estado | Criterio |
+| Plataforma | Participación reportada |
 |---|---|
-| Confirmado | El hallazgo se verificó con documentación, una demostración o un equipo que puede corroborarlo. |
-| Reportado | El hallazgo se mencionó durante el levantamiento y está por corroborar. |
-| Hipótesis | Es una interpretación técnica que requiere verificación. |
-| Pendiente | Falta información o queda una pregunta abierta. |
-| Descartado | Una fuente de validación refutó expresamente el hallazgo. |
+| Copilot Studio | Construcción del agente. |
+| Power Automate | Automatizaciones del agente. |
+| MuleSoft | Capa de integración para consulta o modificación de información, según el flujo. |
+| Azure | Alojamiento del canal web reportado. |
+| Cloudflare / DNS institucional | Publicación del servicio bajo dominio institucional; configuración por validar. |
 
-Para cada hallazgo, registrar la fecha, el servicio o componente, la fuente, el estado y la evidencia o pregunta de validación. Si se corrige un dato, actualizar su descripción y conservar la trazabilidad del cambio.
+**Sin confirmar:** recorrido técnico completo de una petición, responsabilidades precisas de Power Automate y MuleSoft, permisos, registros y acciones ejecutadas en sistemas externos. La existencia de la guía no demuestra que MuleSoft cambie contraseñas.
+
+## 4. Operación y levantamiento técnico
+
+Los agentes que gestiona la persona a entrevistar están **en producción**; su función es de **soporte, no de desarrollo**. No está definido si MASS tendrá responsabilidades futuras de soporte. El levantamiento busca entender primero qué existe y cómo opera.
+
+### Agenda A — Si conoce arquitectura, repositorios y datos (90 min)
+
+| Tiempo | Tema y objetivo |
+|---|---|
+| 10 min | **Inventario:** agentes, propósito, usuarios y canales. |
+| 15 min | **Arquitectura:** componentes, infraestructura, orquestación y dependencias. |
+| 15 min | **Construcción:** plataformas, tecnologías, repositorios, versiones y despliegues. |
+| 15 min | **Datos/conocimiento:** fuentes, actualización, RAG, embeddings o BD vectoriales, si existen. |
+| 15 min | **Proveedores e integraciones:** LLM, API, autenticación, middleware y sistemas institucionales. |
+| 15 min | **Operación:** administración, monitoreo, logs, incidentes, seguridad y continuidad. |
+| 5 min | **Cierre:** documentación y responsables de información faltante. |
+
+**Demostración útil:** seguir una solicitud real de extremo a extremo e identificar dónde se registra, procesa, consulta y responde.
+
+### Agenda B — Si conoce principalmente proveedores, comunicación y soporte (75 min)
+
+| Tiempo | Tema y objetivo |
+|---|---|
+| 10 min | **Servicios:** agentes en producción, funciones y canales. |
+| 15 min | **Proveedores:** plataformas y responsabilidades operativas. |
+| 15 min | **Comunicación:** relación entre agentes, APIs, derivaciones y sistemas externos. |
+| 15 min | **Administración:** consolas, monitoreo, logs, alertas e indicadores. |
+| 10 min | **Incidentes:** fallos frecuentes, diagnóstico, escalamiento y límites del soporte. |
+| 5 min | **Seguridad/continuidad:** permisos, datos y contingencias. |
+| 5 min | **Cierre:** manuales, diagramas y contactos técnicos. |
+
+**Demostración útil:** recorrer una consola operativa y un incidente real, sin exponer información sensible.
+
+### Registro de evidencias
+
+Clasificar cada hallazgo como **confirmado** (verificado), **reportado** (declarado), **hipótesis**, **pendiente** o **descartado**. Registrar fecha y fuente cuando sean conocidas. Distinguir iniciativas institucionales futuras de herramientas efectivamente implementadas.
+
+## 5. Pendientes vigentes
+
+- [ ] Precisar los **otros canales** y mapear responsabilidades, trazabilidad y sistemas utilizados en cada entrada.
+- [ ] Comprender la arquitectura funcional, dependencias y herramientas de operación de SénecaBot.
+- [ ] Aclarar el papel de CariAI.
+- [ ] Validar la derivación bidireccional SénecaBot–CuentaIA y la conservación de contexto.
+- [ ] Identificar el alcance real de Inconcert y Salesforce en el ciclo de atención.
+- [ ] Documentar responsables, escalamiento N0/N1/N2 y tiempos de atención.
+- [ ] Inventariar bases de conocimiento, fuentes de datos y responsables de actualización por agente.
+- [ ] Identificar tareas manuales con potencial de estandarización, sin asumir una decisión de automatización.
+- [ ] Conocer indicadores de atención, experiencia de usuario, disponibilidad e incidentes.
+- [ ] Completar el mapa de proveedores, permisos, monitoreo y mecanismos de continuidad.
+
+### Hallazgos ya incorporados (no pendientes)
+
+- Inventario inicial de canales: correo, teléfono, SénecaIA/SénecaBot, presencial y formularios específicos; «otros» requiere desglose.
+- Identificación de **Cuenta** como **CuentaIA** en el levantamiento y descripción de su orientación funcional.
+- Identificación inicial de plataformas asociadas a CuentaIA, aún con integraciones concretas por validar.
+- Alineación del objetivo del modelo de atención con las orientaciones del **PDI 2026–2030**.
+
+---
+
+> **Alcance documental:** notas de levantamiento complementadas con el PDI institucional. Las iniciativas estratégicas, observaciones operativas y hechos técnicos se diferencian expresamente para no presentar supuestos como implementaciones confirmadas.
